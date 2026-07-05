@@ -1,0 +1,127 @@
+.sidebar{
+    width:300px;
+    min-height:calc(100vh - 70px);
+
+    background:#0d1117;
+
+    border-right:1px solid #30363d;
+
+    padding:25px;
+
+    color:white;
+}
+
+.sidebar-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.sidebar-header h3{
+    font-size:22px;
+    font-weight:700;
+}
+
+.new-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#238636;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    padding:10px 16px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.new-btn:hover{
+    background:#2ea043;
+}
+
+
+.repo-search{
+    width:90%;
+    height:42px;
+    margin:0 auto 20px auto;
+
+    display:block;
+
+    padding:0 15px;
+
+    background:#161b22;
+    color:white;
+
+    border:1px solid #30363d;
+    border-radius:8px;
+
+    outline:none;
+
+    box-sizing:border-box;
+}
+.repo-search:focus{
+    outline:none;
+    border-color:#2f81f7;
+}
+
+.repo-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.repo-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 8px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.repo-item:hover{
+    background:#161b22;
+}
+
+.repo-icon{
+    color:#8b949e;
+    font-size:18px;
+}
+
+.repo-item span{
+    font-size:16px;
+    color:#e6edf3;
+}
+
+.show-more{
+    margin-top:25px;
+
+    color:#2f81f7;
+
+    cursor:pointer;
+
+    text-align:center;
+
+    font-size:15px;
+}
+
+.show-more:hover{
+    text-decoration:underline;
+}
+
+.repo-item{
+    cursor:pointer;
+}

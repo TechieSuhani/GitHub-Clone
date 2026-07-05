@@ -1,0 +1,105 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.issue-modal {
+    width: 520px;
+    max-width: 90%;
+
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+
+    padding: 28px;
+}
+
+.issue-modal h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.issue-modal label {
+    display: block;
+    color: #c9d1d9;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+.issue-modal input,
+.issue-modal textarea,
+.issue-modal select {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.issue-modal input:focus,
+.issue-modal textarea:focus,
+.issue-modal select:focus {
+    border-color: #58a6ff;
+}
+
+.issue-modal textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.cancel-btn {
+    background: #21262d;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #30363d;
+}
+
+.create-btn {
+    background: #238636;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.create-btn:hover {
+    background: #2ea043;
+}

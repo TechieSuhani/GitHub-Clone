@@ -103,3 +103,35 @@
 #logout:hover {
   border: 1px solid white;
 }
+
+.profile-tabs {
+  display: flex;
+  gap: 30px;
+  padding: 14px 40px;
+  border-bottom: 1px solid #30363d;
+  background: #0d1117;
+}
+
+.profile-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8b949e;
+  font-size: 15px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-tab:hover {
+  color: white;
+}
+
+.profile-tab.active {
+  color: white;
+  border-bottom: 2px solid #f78166;
+}
+
+.profile-tab svg {
+  font-size: 16px;
+}

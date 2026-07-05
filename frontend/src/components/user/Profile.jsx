@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./profile.css";
 import Navbar from "../Navbar";
-import { UnderlineNav } from "@primer/react";
-import { BookIcon, RepoIcon } from "@primer/octicons-react";
 import HeatMapProfile from "./HeatMap";
 import { useAuth } from "../../authContext";
 
+import { FaBook, FaFolder } from "react-icons/fa";
+
 const Profile = () => {
   const navigate = useNavigate();
-  const [userDetails, setUserDetails] = useState({ username: "username" });
+
+  const [userDetails, setUserDetails] = useState({
+    username: "username",
+  });
+
   const { setCurrentUser } = useAuth();
 
   useEffect(() => {
@@ -22,60 +26,50 @@ const Profile = () => {
           const response = await axios.get(
             `http://localhost:3002/userProfile/${userId}`
           );
+
           setUserDetails(response.data);
         } catch (err) {
-          console.error("Cannot fetch user details: ", err);
+          console.error("Cannot fetch user details:", err);
         }
       }
     };
+
     fetchUserDetails();
   }, []);
 
   return (
     <>
       <Navbar />
-      <UnderlineNav aria-label="Repository">
-        <UnderlineNav.Item
-          aria-current="page"
-          icon={BookIcon}
-          sx={{
-            backgroundColor: "transparent",
-            color: "white",
-            "&:hover": {
-              textDecoration: "underline",
-              color: "white",
-            },
-          }}
-        >
-          Overview
-        </UnderlineNav.Item>
 
-        <UnderlineNav.Item
+      <div className="profile-tabs">
+        <div className="profile-tab active">
+          <FaBook />
+          <span>Overview</span>
+        </div>
+
+        <div
+          className="profile-tab"
           onClick={() => navigate("/repo")}
-          icon={RepoIcon}
-          sx={{
-            backgroundColor: "transparent",
-            color: "whitesmoke",
-            "&:hover": {
-              textDecoration: "underline",
-              color: "white",
-            },
-          }}
+          style={{ cursor: "pointer" }}
         >
-          Starred Repositories
-        </UnderlineNav.Item>
-      </UnderlineNav>
+          <FaFolder />
+          <span>Starred Repositories</span>
+        </div>
+      </div>
 
       <button
+        id="logout"
+        style={{
+          position: "fixed",
+          bottom: "50px",
+          right: "50px",
+        }}
         onClick={() => {
           localStorage.removeItem("token");
           localStorage.removeItem("userId");
           setCurrentUser(null);
-
           window.location.href = "/auth";
         }}
-        style={{ position: "fixed", bottom: "50px", right: "50px" }}
-        id="logout"
       >
         Logout
       </button>
@@ -91,7 +85,7 @@ const Profile = () => {
           <button className="follow-btn">Follow</button>
 
           <div className="follower">
-            <p>10 Follower</p>
+            <p>10 Followers</p>
             <p>3 Following</p>
           </div>
         </div>

@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../authContext";
-
-import { PageHeader } from "@primer/react/drafts";
-import { Box, Button } from "@primer/react";
 import "./auth.css";
 
 import logo from "../../assets/github-mark-white.svg";
@@ -22,16 +19,18 @@ const Signup = () => {
 
     try {
       setLoading(true);
+
       const res = await axios.post("http://localhost:3000/signup", {
-        email: email,
-        password: password,
-        username: username,
+        email,
+        username,
+        password,
       });
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userId", res.data.userId);
 
       setCurrentUser(res.data.userId);
+
       setLoading(false);
 
       window.location.href = "/";
@@ -45,27 +44,20 @@ const Signup = () => {
   return (
     <div className="login-wrapper">
       <div className="login-logo-container">
-        <img className="logo-login" src={logo} alt="Logo" />
+        <img className="logo-login" src={logo} alt="GitHub Logo" />
       </div>
 
       <div className="login-box-wrapper">
         <div className="login-heading">
-          <Box sx={{ padding: 1 }}>
-            <PageHeader>
-              <PageHeader.TitleArea variant="large">
-                <PageHeader.Title>Sign Up</PageHeader.Title>
-              </PageHeader.TitleArea>
-            </PageHeader>
-          </Box>
+          <h1 className="login-title">Sign Up</h1>
         </div>
 
         <div className="login-box">
           <div>
             <label className="label">Username</label>
+
             <input
               autoComplete="off"
-              name="Username"
-              id="Username"
               className="input"
               type="text"
               value={username}
@@ -75,10 +67,9 @@ const Signup = () => {
 
           <div>
             <label className="label">Email address</label>
+
             <input
               autoComplete="off"
-              name="Email"
-              id="Email"
               className="input"
               type="email"
               value={email}
@@ -86,12 +77,11 @@ const Signup = () => {
             />
           </div>
 
-          <div className="div">
+          <div>
             <label className="label">Password</label>
+
             <input
               autoComplete="off"
-              name="Password"
-              id="Password"
               className="input"
               type="password"
               value={password}
@@ -99,14 +89,13 @@ const Signup = () => {
             />
           </div>
 
-          <Button
-            variant="primary"
+          <button
             className="login-btn"
             disabled={loading}
             onClick={handleSignup}
           >
             {loading ? "Loading..." : "Signup"}
-          </Button>
+          </button>
         </div>
 
         <div className="pass-box">

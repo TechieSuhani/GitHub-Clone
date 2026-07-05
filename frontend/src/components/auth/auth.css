@@ -144,3 +144,45 @@
       width: 200px;
     }
   }
+
+  .login-title {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.login-btn {
+  display: block;
+  width: 80%;          /* Pehle 100% tha */
+  max-width: 320px;
+  margin: 24px auto 0;
+
+  height: 38px;
+
+  background: #238636;
+  color: #fff;
+
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.login-btn:hover {
+  background: #2ea043;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+/* .login-box .input {
+  margin-top: 8px;
+  margin-bottom: 18px;
+} */

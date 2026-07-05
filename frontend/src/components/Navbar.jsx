@@ -32,7 +32,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchRepositories = async () => {
       try {
-        const response = await fetch("http://localhost:3000/repo/all");
+        const response = await fetch("http://16.171.0.172:3000/repo/all");
 
         const data = await response.json();
 

@@ -17,7 +17,7 @@ const Actions = () => {
   const fetchWorkflows = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/actions/all/${id}`
+        `http://16.171.0.172:3000/actions/all/${id}`
       );
 
       const data = await response.json();
@@ -49,7 +49,7 @@ const Actions = () => {
 
     try {
       await fetch(
-        `http://localhost:3000/actions/delete/${workflowId}`,
+        `http://16.171.0.172:3000/actions/delete/${workflowId}`,
         {
           method: "DELETE",
         }
@@ -70,7 +70,7 @@ const Actions = () => {
       // Delete previous workflow automatically
       if (workflows.length > 0) {
         await fetch(
-          `http://localhost:3000/actions/delete/${workflows[0]._id}`,
+          `http://16.171.0.172:3000/actions/delete/${workflows[0]._id}`,
           {
             method: "DELETE",
           }
@@ -78,7 +78,7 @@ const Actions = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3000/actions/run/${id}`,
+        `http://16.171.0.172:3000/actions/run/${id}`,
         {
           method: "POST",
         }
@@ -112,7 +112,7 @@ const Actions = () => {
         }
 
         await fetch(
-          `http://localhost:3000/actions/update/${actionId}`,
+          `http://16.171.0.172:3000/actions/update/${actionId}`,
           {
             method: "PUT",
             headers: {

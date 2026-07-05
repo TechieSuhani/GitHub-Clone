@@ -16,7 +16,7 @@ const PullRequests = () => {
   const fetchPullRequests = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/pullrequest/all/${id}`,
+        `http://16.171.0.172:3000/pullrequest/all/${id}`,
       );
 
       const data = await response.json();
@@ -36,7 +36,7 @@ const PullRequests = () => {
   const createPullRequest = async (prData) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/pullrequest/create/${id}`,
+        `http://16.171.0.172:3000/pullrequest/create/${id}`,
         {
           method: "POST",
           headers: {
@@ -65,7 +65,7 @@ const PullRequests = () => {
   const updatePullRequest = async (pullRequestId, prData) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/pullrequest/update/${pullRequestId}`,
+        `http://16.171.0.172:3000/pullrequest/update/${pullRequestId}`,
         {
           method: "PUT",
           headers: {
@@ -101,7 +101,7 @@ const PullRequests = () => {
   const mergePullRequest = async (pr) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/pullrequest/update/${pr._id}`,
+        `http://16.171.0.172:3000/pullrequest/update/${pr._id}`,
         {
           method: "PUT",
           headers: {
@@ -132,7 +132,7 @@ const PullRequests = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/pullrequest/delete/${pullRequestId}`,
+        `http://16.171.0.172:3000/pullrequest/delete/${pullRequestId}`,
         {
           method: "DELETE",
         },

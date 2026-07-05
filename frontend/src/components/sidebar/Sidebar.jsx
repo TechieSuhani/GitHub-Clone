@@ -14,7 +14,7 @@ const Sidebar = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/repo/user/${userId}`,
+          `http://16.171.0.172:3000/repo/user/${userId}`,
         );
 
         const data = await response.json();

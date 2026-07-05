@@ -13,7 +13,7 @@ const AddFileModal = ({ closeModal, repositoryId, refreshRepository }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/update/${repositoryId}`,
+        `http://16.171.0.172:3000/repo/update/${repositoryId}`,
         {
           method: "PUT",
 

@@ -13,7 +13,7 @@ const RepositoryIssues = () => {
 
   const fetchIssues = async () => {
     try {
-      const response = await fetch(`http://16.171.0.172:3000/issue/all/${id}`);
+      const response = await fetch(`http://localhost:3000/issue/all/${id}`);
 
       const data = await response.json();
 
@@ -25,7 +25,7 @@ const RepositoryIssues = () => {
 
   const handleCreateIssue = async (issueData) => {
     try {
-      const response = await fetch(`http://16.171.0.172:3000/issue/create/${id}`, {
+      const response = await fetch(`http://localhost:3000/issue/create/${id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const RepositoryIssues = () => {
   const updateIssue = async (issueId, issueData) => {
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/issue/update/${issueId}`,
+        `http://localhost:3000/issue/update/${issueId}`,
         {
           method: "PUT",
           headers: {
@@ -82,7 +82,7 @@ const RepositoryIssues = () => {
 
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/issue/delete/${issueId}`,
+        `http://localhost:3000/issue/delete/${issueId}`,
         {
           method: "DELETE",
         },

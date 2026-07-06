@@ -31,7 +31,7 @@ const Repository = () => {
 
   const fetchRepository = async () => {
     try {
-      const response = await fetch(`http://16.171.0.172:3000/repo/${id}`);
+      const response = await fetch(`http://localhost:3000/repo/${id}`);
 
       const data = await response.json();
 
@@ -66,7 +66,7 @@ const Repository = () => {
   const updateFile = async () => {
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/repo/update/${repository._id}`,
+        `http://localhost:3000/repo/update/${repository._id}`,
         {
           method: "PUT",
           headers: {
@@ -103,7 +103,7 @@ const Repository = () => {
 
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/repo/file/${repository._id}`,
+        `http://localhost:3000/repo/file/${repository._id}`,
         {
           method: "DELETE",
 

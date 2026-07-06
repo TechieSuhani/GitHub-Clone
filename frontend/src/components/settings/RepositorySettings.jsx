@@ -14,7 +14,7 @@ const RepositorySettings = () => {
 
   const fetchRepository = async () => {
     try {
-      const response = await fetch(`http://16.171.0.172:3000/repo/${id}`);
+      const response = await fetch(`http://localhost:3000/repo/${id}`);
       const data = await response.json();
 
       const repo = Array.isArray(data) ? data[0] : data;
@@ -36,7 +36,7 @@ const RepositorySettings = () => {
   const saveChanges = async () => {
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/repo/settings/${id}`,
+        `http://localhost:3000/repo/settings/${id}`,
         {
           method: "PUT",
           headers: {
@@ -71,7 +71,7 @@ const RepositorySettings = () => {
 
     try {
       const response = await fetch(
-        `http://16.171.0.172:3000/repo/${id}`,
+        `http://localhost:3000/repo/${id}`,
         {
           method: "DELETE",
         }

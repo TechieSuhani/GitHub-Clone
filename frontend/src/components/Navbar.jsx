@@ -32,7 +32,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchRepositories = async () => {
       try {
-        const response = await fetch("http://localhost:3000/repo/all");
+        const response = await fetch("https://github-clone-backend-jxkl.onrender.com/repo/all");
 
         const data = await response.json();
 

@@ -20,7 +20,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/repo/user/${userId}`,
+          `https://github-clone-backend-jxkl.onrender.com/repo/user/${userId}`,
         );
 
         const data = await response.json();
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch("http://localhost:3000/repo/all");
+        const response = await fetch("https://github-clone-backend-jxkl.onrender.com/repo/all");
 
         const data = await response.json();
 

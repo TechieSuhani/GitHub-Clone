@@ -17,7 +17,7 @@ const CreateRepository = () => {
     try {
       const owner = localStorage.getItem("userId");
 
-      const response = await fetch("http://localhost:3000/repo/create", {
+      const response = await fetch("https://github-clone-backend-jxkl.onrender.com/repo/create", {
         method: "POST",
 
         headers: {

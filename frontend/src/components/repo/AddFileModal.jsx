@@ -13,7 +13,7 @@ const AddFileModal = ({ closeModal, repositoryId, refreshRepository }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/update/${repositoryId}`,
+        `https://github-clone-backend-jxkl.onrender.com/repo/update/${repositoryId}`,
         {
           method: "PUT",
 

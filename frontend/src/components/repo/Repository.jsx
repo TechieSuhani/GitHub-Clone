@@ -31,7 +31,7 @@ const Repository = () => {
 
   const fetchRepository = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/repo/${id}`);
+      const response = await fetch(`https://github-clone-backend-jxkl.onrender.com/repo/${id}`);
 
       const data = await response.json();
 
@@ -66,7 +66,7 @@ const Repository = () => {
   const updateFile = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/update/${repository._id}`,
+        `https://github-clone-backend-jxkl.onrender.com/repo/update/${repository._id}`,
         {
           method: "PUT",
           headers: {
@@ -103,7 +103,7 @@ const Repository = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/file/${repository._id}`,
+        `https://github-clone-backend-jxkl.onrender.com/repo/file/${repository._id}`,
         {
           method: "DELETE",
 

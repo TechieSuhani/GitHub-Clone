@@ -17,7 +17,7 @@ const Actions = () => {
   const fetchWorkflows = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/actions/all/${id}`
+        `https://github-clone-backend-jxkl.onrender.com/actions/all/${id}`
       );
 
       const data = await response.json();
@@ -49,7 +49,7 @@ const Actions = () => {
 
     try {
       await fetch(
-        `http://localhost:3000/actions/delete/${workflowId}`,
+        `https://github-clone-backend-jxkl.onrender.com/actions/delete/${workflowId}`,
         {
           method: "DELETE",
         }
@@ -70,7 +70,7 @@ const Actions = () => {
       // Delete previous workflow automatically
       if (workflows.length > 0) {
         await fetch(
-          `http://localhost:3000/actions/delete/${workflows[0]._id}`,
+          `https://github-clone-backend-jxkl.onrender.com/actions/delete/${workflows[0]._id}`,
           {
             method: "DELETE",
           }
@@ -78,7 +78,7 @@ const Actions = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3000/actions/run/${id}`,
+        `https://github-clone-backend-jxkl.onrender.com/actions/run/${id}`,
         {
           method: "POST",
         }
@@ -112,7 +112,7 @@ const Actions = () => {
         }
 
         await fetch(
-          `http://localhost:3000/actions/update/${actionId}`,
+          `https://github-clone-backend-jxkl.onrender.com/actions/update/${actionId}`,
           {
             method: "PUT",
             headers: {

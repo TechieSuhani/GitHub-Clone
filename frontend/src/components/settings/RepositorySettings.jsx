@@ -14,7 +14,7 @@ const RepositorySettings = () => {
 
   const fetchRepository = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/repo/${id}`);
+      const response = await fetch(`https://github-clone-backend-jxkl.onrender.com/repo/${id}`);
       const data = await response.json();
 
       const repo = Array.isArray(data) ? data[0] : data;
@@ -36,7 +36,7 @@ const RepositorySettings = () => {
   const saveChanges = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/settings/${id}`,
+        `https://github-clone-backend-jxkl.onrender.com/repo/settings/${id}`,
         {
           method: "PUT",
           headers: {
@@ -71,7 +71,7 @@ const RepositorySettings = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/repo/${id}`,
+        `https://github-clone-backend-jxkl.onrender.com/repo/${id}`,
         {
           method: "DELETE",
         }

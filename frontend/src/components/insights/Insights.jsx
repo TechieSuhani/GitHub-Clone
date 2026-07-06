@@ -39,7 +39,7 @@ const Insights = () => {
 
   const fetchInsights = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/repo/insights/${id}`);
+      const response = await fetch(`https://github-clone-backend-jxkl.onrender.com/repo/insights/${id}`);
 
       const data = await response.json();
       setInsights(data);

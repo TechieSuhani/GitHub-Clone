@@ -2,35 +2,44 @@
 
 A Full-Stack Version Control and Repository Management Platform built using the MERN Stack, inspired by GitHub.
 
-The application enables developers to create repositories, manage source code, collaborate through Issues and Pull Requests, simulate GitHub Actions workflows, visualize repository insights, and perform Git-like operations in an intuitive web interface.
-
-The project also integrates AWS services for deployment and backend infrastructure while providing a modern GitHub-inspired user experience.
+The application enables developers to create repositories, manage source code, collaborate through Issues and Pull Requests, simulate GitHub Actions workflows, visualize repository insights, and perform Git-like operations through an intuitive GitHub-inspired interface.
 
 ---
 
-# Features
+# 🚀 Live Demo
+
+### Frontend
+https://main.d2xdcn0sjrppcq.amplifyapp.com
+
+### Backend API
+https://github-clone-backend-jxkl.onrender.com
+
+---
+
+# ✨ Features
 
 - User Authentication (Login / Signup)
 - JWT Based Authorization
 - Create & Manage Repositories
-- Repository Description & Visibility
-- Add, Edit & Delete Files
+- Public & Private Repository Support
+- Repository Description & Settings
 - Source Code Viewer & Editor
+- Add, Edit & Delete Files
 - Commit History Tracking
-- Branch Management
 - Git Command Simulation
+- Branch Management
 - GitHub Actions (CI/CD Workflow Simulation)
 - Workflow Progress Tracking
 - Workflow Logs Viewer
 - Issue Tracking System
 - Pull Request Management
 - Repository Insights Dashboard
-- Repository Settings
 - Responsive GitHub Inspired UI
+- Dark Theme
 
 ---
 
-# Tech Stack
+# 🛠 Tech Stack
 
 ## Frontend
 
@@ -44,27 +53,22 @@ The project also integrates AWS services for deployment and backend infrastructu
 
 - Node.js
 - Express.js
-- JWT Authentication
 - REST APIs
+- JWT Authentication
 
 ## Database
 
-- MongoDB
+- MongoDB Atlas
 - Mongoose
 
 ## Cloud & Deployment
 
-- AWS
-- AWS EC2
-- AWS IAM
-- AWS Security Groups
-- AWS Key Pair Authentication
-- Nginx
-- PM2
+- AWS Amplify (Frontend Hosting)
+- Render (Backend Hosting)
 
 ---
 
-# Project Structure
+# 📂 Project Structure
 
 ```
 GitHub-Clone/
@@ -76,13 +80,14 @@ GitHub-Clone/
 │   ├── models/
 │   ├── routes/
 │   ├── package.json
+│   └── index.js
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── components/
 │   │   ├── pages/
-│   │   ├── assets/
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   └── package.json
@@ -93,7 +98,7 @@ GitHub-Clone/
 
 ---
 
-# Core Functionalities
+# 🚀 Core Functionalities
 
 ## Authentication
 
@@ -101,8 +106,6 @@ GitHub-Clone/
 - Secure Login
 - JWT Authentication
 - Protected Routes
-
----
 
 ## Repository Management
 
@@ -112,26 +115,20 @@ GitHub-Clone/
 - Repository Settings
 - Public Repository View
 
----
-
 ## File Management
 
 - Create New File
 - Edit Existing File
 - Delete Files
-- Code Viewer
-- Source Code Editor
-
----
+- Source Code Viewer
+- Code Editor
 
 ## Version Control
 
 - Commit Creation
 - Commit History
-- Git Command Simulation
 - Repository State Management
-
----
+- Git Command Simulation
 
 ## Issue Management
 
@@ -140,25 +137,19 @@ GitHub-Clone/
 - Track Issue Status
 - Close Issues
 
----
-
 ## Pull Requests
 
 - Create Pull Requests
+- Review Changes
 - Merge Pull Requests
-- Review Repository Changes
-
----
 
 ## GitHub Actions
 
-- Run CI/CD Workflow
-- Workflow Progress Bar
+- Run CI/CD Workflows
+- Workflow Progress
 - Workflow Logs
-- Workflow Status
 - Workflow History
-
----
+- Workflow Status
 
 ## Repository Insights
 
@@ -169,7 +160,7 @@ GitHub-Clone/
 
 ---
 
-## User Interface
+# 🎨 User Interface
 
 - GitHub Inspired Design
 - Dark Theme
@@ -178,35 +169,83 @@ GitHub-Clone/
 
 ---
 
-# Technologies Used
+# 🏗 Deployment Architecture
+
+```
+React Frontend
+        │
+        ▼
+ AWS Amplify
+        │
+ REST APIs
+        │
+        ▼
+ Render Backend
+(Node.js + Express.js)
+        │
+        ▼
+ MongoDB Atlas
+```
+
+---
+
+# ⚙ Technologies Used
 
 | Category | Technology |
 |----------|------------|
 | Frontend | React.js, CSS3 |
 | Backend | Node.js, Express.js |
-| Database | MongoDB |
+| Database | MongoDB Atlas |
 | Authentication | JWT |
-| Cloud | AWS EC2 |
-| Server | Nginx |
-| Process Manager | PM2 |
-| Deployment | AWS |
+| Frontend Hosting | AWS Amplify |
+| Backend Hosting | Render |
 | APIs | REST APIs |
 
 ---
 
-# AWS Services Used
+# 📦 Installation
 
-- Amazon EC2
-- IAM
-- Security Groups
-- SSH Key Pair Authentication
-- Ubuntu Server
-- Nginx Reverse Proxy
-- PM2 Process Manager
+## Clone Repository
+
+```bash
+git clone https://github.com/TechieSuhani/GitHub-Clone.git
+```
+
+## Install Backend Dependencies
+
+```bash
+cd backend
+npm install
+```
+
+## Install Frontend Dependencies
+
+```bash
+cd ../frontend
+npm install
+```
 
 ---
 
-# Future Enhancements
+# ▶ Run Project Locally
+
+## Start Backend
+
+```bash
+cd backend
+node index.js start
+```
+
+## Start Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+---
+
+# 🔮 Future Enhancements
 
 - Repository Fork
 - Repository Star
@@ -222,11 +261,18 @@ GitHub-Clone/
 - Real Git Integration
 - Docker Deployment
 - Kubernetes Deployment
+- CI/CD Pipeline Automation
 
 ---
 
-# Author
+# 👩‍💻 Author
 
-**TechieSuhani (Suhani Maurya)**
+**Suhani Maurya (TechieSuhani)**
 
-Full Stack Developer passionate about building scalable web applications, cloud-based systems, and developer collaboration platforms using the MERN Stack and AWS.
+Full Stack Developer passionate about building scalable web applications, cloud-based systems, and developer collaboration platforms using the MERN Stack.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
